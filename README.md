@@ -40,4 +40,4 @@ And add the initial config for oh-my-posh
 
 To customize oh-my-posh look at [Themes](https://ohmyposh.dev/docs/themes) and [Customization](https://ohmyposh.dev/docs/installation/customize)
 
-next step: look at my vim config to get a matching code editor experience :)
+next step: look at my [nvim](https://github.com/LukasMarsch/infinity-nvim) config to get a matching code editor experience :)
