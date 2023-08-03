@@ -12,14 +12,9 @@ To install:
 - On Windows:
     - Open Settings > Personalization > Fonts
     - Install the font by dragging and dropping the unzipped folder to "Add Fonts"
-- Install [Alacritty](https://alacritty.org)
-- Download the latest Installer
+- Download the latest [Installer](https://github.com/LukasMarsch/infinity-alacritty/releases/tag/v0.1) and execute it
 
-    ```powershell 
-    ### TODO cd ~\Downloads; iwr -useb "https://raw.githubusercontent.com/LukasMarsch/infinity-alacritty/main/installer.ps1" | ni installer.ps1
-    ```
-
-- Now to customize colors, open your profile in your favourite code editor and start fumbling around
+- Now to customize colors, open your $profile in your favourite code editor and start fumbling around
 
     ```powershell
     nvim $profile
