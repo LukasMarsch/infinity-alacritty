@@ -39,6 +39,7 @@ function elevate {
 }
 
 function google ([String][Parameter(Position=0)] $sTerm) {
-    if($sTerm) { $sTerm = "/search?q=" + $sTerm
+    if($sTerm) { $sTerm = "/search?q=" + $sTerm}
+    else { $sTerm = $null }
     Start-Process microsoft-edge:"https://www.google.com$sTerm"
 }
