@@ -5,7 +5,7 @@ Write-Host "Installing latest Powershell version please acknowledge and don't as
 winget install Microsoft.Powershell
 
 Write-Host "Installing latest Pansies version please acknowledge and don't ask questions"
-winget install Pansies
+Install-Module Pansies -AllowClobber
 
 Write-Host "Downloading alacritty config"
 if (!Test-Path $alacrittyConfig) {
