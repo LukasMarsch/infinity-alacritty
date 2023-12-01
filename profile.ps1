@@ -1,5 +1,5 @@
 Set-Alias vim nvim
-Set-Alias stop Measure-Command
+Set-Alias dn dotnet
 Write-Host $(Get-Date -Format 'dddd HH:mm:ss tt')
 
 function prompt {
@@ -19,9 +19,7 @@ function prompt {
 
     Write-Host $os -ForegroundColor Black -BackgroundColor $ColorChanger -NoNewline
 
-    If ($CmdPromptCurrentFolder -like "*:*") { Write-Host "AAAAAAAAAAA" -BackgroundColor Red }
-
-    Write-Host ""-ForegroundColor $ColorChanger -BackgroundColor "#45475A" -NoNewline
+    Write-Host "" -ForegroundColor $ColorChanger -BackgroundColor "#45475A" -NoNewline
     Write-Host " \$CmdPromptCurrentFolder "  -ForegroundColor White -BackgroundColor "#45475A" -NoNewline
     Write-Host "" -ForegroundColor "#45475A" -BackgroundColor "#1E222A" -NoNewline
 
@@ -43,17 +41,21 @@ function google ([String][Parameter(Position=0)] $sTerm) {
     Start-Process microsoft-edge:"https://www.google.com$sTerm"
 }
 
-function l {
-    Get-ChildItem -Directory
-}
-
 function ll {
-    Get-ChildItem -Force
+    Get-ChildItem -Directory -Force
 }
 
-function gitignore([String][Parameter(Position=0)] $lang) {
-    switch($lang) {
-        "c#" {Invoke-WebRequest -Uri "https://raw.githubusercontent.com/dotnet/core/main/.gitignore" | New-Item .\.gitignore}
-        default {Write-Host "No idea dude"}
-    }
+function l { ll }
+
+function la { ls -Force }
+
+function repo {
+    param ( [Parameter(Mandatory, Position=0)][Int] $in )
+
+    if($in -eq "1") { cd -Path "C:\Users\lmarsch\Repositories" }
+    elseif($in -eq "2") { cd -Path "C:\Users\lmarsch\OneDrive - Vater Unternehmensgruppe\Ausbildung\Repositories" }
+}
+
+function edge ([String][Parameter(Position=0)] $path) {
+    Start-Process microsoft-edge:$path
 }
