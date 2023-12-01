@@ -61,6 +61,13 @@ function gitignore([String][Parameter(Position=0)] $lang) {
     }
 }
 
+function repo {
+    param ( [Parameter(Mandatory, Position=0)][Int] $in )
+
+    if($in -eq "1") { cd -Path "C:\Users\lmarsch\Repositories" }
+    elseif($in -eq "2") { cd -Path "C:\Users\lmarsch\OneDrive - Vater Unternehmensgruppe\Ausbildung\Repositories" }
+}
+
 function edge ([String][Parameter(Position=0)] $path) {
     Start-Process microsoft-edge:$path
 }
