@@ -1,5 +1,6 @@
 Set-Alias vim nvim
 Set-Alias dn dotnet
+Set-Alias stop Measure-Command
 Write-Host $(Get-Date -Format 'dddd HH:mm:ss tt')
 
 function prompt {
@@ -41,13 +42,17 @@ function google ([String][Parameter(Position=0)] $sTerm) {
     Start-Process microsoft-edge:"https://www.google.com$sTerm"
 }
 
-function ll {
-    Get-ChildItem -Directory -Force
+function ld {
+    Get-ChildItem -Directory
 }
 
-function l { ll }
+function lf { 
+    Get-ChildItem -File
+}
 
-function la { ls -Force }
+function la {
+    Get-ChildItem -Force 
+}
 
 function repo {
     param ( [Parameter(Mandatory, Position=0)][Int] $in )
