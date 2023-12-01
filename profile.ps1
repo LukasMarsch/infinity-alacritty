@@ -46,12 +46,12 @@ function ld {
     Get-ChildItem -Directory
 }
 
-function lf {
+function lf { 
     Get-ChildItem -File
 }
 
 function la {
-    Get-ChildItem -Force
+    Get-ChildItem -Force 
 }
 
 function gitignore([String][Parameter(Position=0)] $lang) {
