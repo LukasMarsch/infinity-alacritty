@@ -1,6 +1,5 @@
-#oh-my-posh init pwsh --config '~\AppData\Local\Programs\oh-my-posh\themes\kushal.omp.json' | Invoke-Expression
-
 Set-Alias vim nvim
+Set-Alias stop Measure-Command
 Write-Host $(Get-Date -Format 'dddd HH:mm:ss tt')
 
 function prompt {
@@ -22,7 +21,7 @@ function prompt {
 
     If ($CmdPromptCurrentFolder -like "*:*") { Write-Host "AAAAAAAAAAA" -BackgroundColor Red }
 
-    Write-Host "" -ForegroundColor $ColorChanger -BackgroundColor "#45475A" -NoNewline
+    Write-Host ""-ForegroundColor $ColorChanger -BackgroundColor "#45475A" -NoNewline
     Write-Host " \$CmdPromptCurrentFolder "  -ForegroundColor White -BackgroundColor "#45475A" -NoNewline
     Write-Host "" -ForegroundColor "#45475A" -BackgroundColor "#1E222A" -NoNewline
 
@@ -42,4 +41,19 @@ function google ([String][Parameter(Position=0)] $sTerm) {
     if($sTerm) { $sTerm = "/search?q=" + $sTerm}
     else { $sTerm = $null }
     Start-Process microsoft-edge:"https://www.google.com$sTerm"
+}
+
+function l {
+    Get-ChildItem -Directory
+}
+
+function ll {
+    Get-ChildItem -Force
+}
+
+function gitignore([String][Parameter(Position=0)] $lang) {
+    switch($lang) {
+        "c#" {Invoke-WebRequest -Uri "https://raw.githubusercontent.com/dotnet/core/main/.gitignore" | New-Item .\.gitignore}
+        default {Write-Host "No idea dude"}
+    }
 }
