@@ -20,7 +20,7 @@ function prompt {
 
     Write-Host $os -ForegroundColor Black -BackgroundColor $ColorChanger -NoNewline
 
-    Write-Host "" -ForegroundColor $ColorChanger -BackgroundColor "#45475A" -NoNewline
+    Write-Host ""-ForegroundColor $ColorChanger -BackgroundColor "#45475A" -NoNewline
     Write-Host " \$CmdPromptCurrentFolder "  -ForegroundColor White -BackgroundColor "#45475A" -NoNewline
     Write-Host "" -ForegroundColor "#45475A" -BackgroundColor "#1E222A" -NoNewline
 
@@ -54,13 +54,14 @@ function la {
     Get-ChildItem -Force 
 }
 
-function repo {
-    param ( [Parameter(Mandatory, Position=0)][Int] $in )
-
-    if($in -eq "1") { cd -Path "C:\Users\lmarsch\Repositories" }
-    elseif($in -eq "2") { cd -Path "C:\Users\lmarsch\OneDrive - Vater Unternehmensgruppe\Ausbildung\Repositories" }
+function gitignore([String][Parameter(Position=0)] $lang) {
+    switch($lang) {
+        "c#" {Invoke-WebRequest -Uri "https://raw.githubusercontent.com/dotnet/core/main/.gitignore" | New-Item .\.gitignore}
+        default {Write-Host "No idea dude"}
+    }
 }
 
 function edge ([String][Parameter(Position=0)] $path) {
     Start-Process microsoft-edge:$path
 }
+
