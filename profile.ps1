@@ -20,8 +20,6 @@ function prompt {
 
     Write-Host $os -ForegroundColor Black -BackgroundColor $ColorChanger -NoNewline
 
-    If ($CmdPromptCurrentFolder -like "*:*") { Write-Host "AAAAAAAAAAA" -BackgroundColor Red }
-
     Write-Host ""-ForegroundColor $ColorChanger -BackgroundColor "#45475A" -NoNewline
     Write-Host " \$CmdPromptCurrentFolder "  -ForegroundColor White -BackgroundColor "#45475A" -NoNewline
     Write-Host "" -ForegroundColor "#45475A" -BackgroundColor "#1E222A" -NoNewline
