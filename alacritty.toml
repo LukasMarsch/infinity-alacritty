@@ -1,0 +1,31 @@
+[colors.primary]
+background = "#1E222A"
+
+[cursor.style]
+blinking = "Off"
+shape = "Block"
+
+[font]
+size = 10.5
+
+[font.bold]
+family = "jetbrainsmono nerd font mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "jetbrainsmono nerd font mono"
+style = "BoldItalic"
+
+[font.italic]
+family = "jetbrainsmono nerd font mono"
+style = "MediumItalic"
+
+[font.normal]
+family = "jetbrainsmono nerd font mono"
+
+[shell]
+program = 'C:\Program Files\PowerShell\7\pwsh.exe'
+
+[window]
+startup_mode = "Maximized"
+title = "Terminal"
