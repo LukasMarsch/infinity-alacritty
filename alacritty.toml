@@ -1,0 +1,55 @@
+[cursor.style]
+blinking = "Off"
+shape = "Block"
+
+[font]
+size = 10.5
+
+[font.normal]
+family = "JetBrainsMono Nerd Font Mono"
+style = "SemiBold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font Mono"
+style = "MediumItalic"
+
+[font.bold]
+family =  "JetBrainsMono Nerd Font Mono"
+style = "ExtraBold"
+
+[shell]
+program = 'C:\Program Files\PowerShell\7\pwsh.exe'
+
+[window]
+startup_mode = "Maximized"
+title = "Terminal"
+
+# Default colors
+[colors.primary]
+foreground = '#d8d8d8'
+background = "#1E222A"
+
+[colors.cursor]
+text = '#181818'
+cursor = '#d8d8d8'
+
+[colors.normal]
+black   = '#181818'
+red     = '#ab4642'
+green   = '#a1b56c'
+yellow  = '#f7ca88'
+blue    = '#7cafc2'
+magenta = '#ba8baf'
+cyan    = '#86c1b9'
+white   = '#d8d8d8'
+
+# Bright colors
+[colors.bright]
+black   = '#585858'
+red     = '#ab4642'
+green   = '#a1b56c'
+yellow  = '#f7ca88'
+blue    = '#7cafc2'
+magenta = '#ba8baf'
+cyan    = '#86c1b9'
+white   = '#f8f8f8'
